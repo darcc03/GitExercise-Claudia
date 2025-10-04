@@ -17,13 +17,13 @@ class GitCommands {
 
     // Command: git status
     public String status() {
-        StringBuilder bs = new StringBuilder();
+        StringBuilder cl = new StringBuilder();
         int changesCount = this.working_directory.new_changes.size();
-        bs.append("You have ").append(changesCount).append(" change/s.\n");
+        cl.append("You have ").append(changesCount).append(" change/s.\n");
         for (String file : this.working_directory.new_changes) {
-            bs.append(file).append("\n");
+            cl.append(file).append("\n");
         }
-        return bs.toString();
+        return cl.toString();
     }
 
     // Command: git add <filename/file directory/wildcard>
